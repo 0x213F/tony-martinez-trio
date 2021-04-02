@@ -279,6 +279,9 @@ body {
     width:100vw;
     height:100vh;
 }
+.link-white {
+  color: white;
+}
 ::-webkit-scrollbar {
     width:5px;
     height:5px;
