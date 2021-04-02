@@ -12,20 +12,6 @@ function closeabout(){
         $("#about_container").css("display","none");
     },1400);
 }
-function showwork(){
-    $("#work_container").css("display","inherit");
-    $("#work_container").addClass("animated slideInRight");
-    setTimeout(function(){
-        $("#work_container").removeClass("animated slideInRight");
-    },800);
-}
-function closework(){
-    $("#work_container").addClass("animated slideOutRight");
-    setTimeout(function(){
-        $("#work_container").removeClass("animated slideOutRight");
-        $("#work_container").css("display","none");
-    },800);
-}
 function showcontact(){
     $("#contact_container").css("display","inherit");
     $("#contact_container").addClass("animated slideInUp");
