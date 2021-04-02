@@ -2,4 +2,4 @@
 
 # Fimbo
 
-This is a fork of an excellent repository: https://github.com/imfunniee/fimbo
+This is a fork (Fimbo)[https://github.com/imfunniee/fimbo].
