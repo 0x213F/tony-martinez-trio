@@ -1,4 +1,6 @@
-function showabout(){
+function showabout(name){
+    $(`.tmt-personel-selector.${name}`).click();
+
     $("#about_container").css("display","inherit");
     $("#about_container").addClass("animated slideInUp");
     setTimeout(function(){
@@ -12,18 +14,20 @@ function closeabout(){
         $("#about_container").css("display","none");
     },1400);
 }
-function showcontact(){
-    $("#contact_container").css("display","inherit");
-    $("#contact_container").addClass("animated slideInUp");
+function showcontact(){}
+function closecontact(){}
+function showevents(){
+    $("#events_container").css("display","inherit");
+    $("#events_container").addClass("animated slideInUp");
     setTimeout(function(){
-        $("#contact_container").removeClass("animated slideInUp");
+        $("#events_container").removeClass("animated slideInUp");
     },800);
 }
-function closecontact(){
-    $("#contact_container").addClass("animated slideOutDown");
+function closeevents(){
+    $("#events_container").addClass("animated slideOutDown");
     setTimeout(function(){
-        $("#contact_container").removeClass("animated slideOutDown");
-        $("#contact_container").css("display","none");
+        $("#events_container").removeClass("animated slideOutDown");
+        $("#events_container").css("display","none");
     },800);
 }
 setTimeout(function(){
@@ -35,5 +39,35 @@ setTimeout(function(){
       $("#about").removeClass("animated fadeIn");
       $("#contact").removeClass("animated fadeIn");
       $("#work").removeClass("animated fadeIn");
-    },1000);
-},1500);
+    }, 1750);
+}, 750);
+
+
+const $aboutPhoto = $("#about-photo");
+const $personelSelector = $(".tmt-personel-selector");
+const $tony = $("#tony"),
+      $hanson = $("#hanson"),
+      $josh = $("#josh");
+
+$personelSelector.click(function() {
+  const $this = $(this),
+        thisText = $this.text();
+
+  $(".tmt-personel-selector").removeClass("selected");
+  $this.addClass("selected");
+
+  $tony.hide();
+  $hanson.hide();
+  $josh.hide();
+
+  if(thisText === "Tony") {
+    $aboutPhoto.attr("src", "./imgs/tony.jpeg");
+    $tony.show();
+  } else if(thisText === "Hanson") {
+    $aboutPhoto.attr("src", "./imgs/hanson.jpeg");
+    $hanson.show();
+  } else if(thisText === "Josh") {
+    $aboutPhoto.attr("src", "./imgs/josh.jpeg");
+    $josh.show();
+  }
+});
