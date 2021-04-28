@@ -53,13 +53,13 @@ body {
     background:rgb(255, 50, 50);
     margin-left:-5px;
 }
-#menu, #menu2 {
+#menu {
     width:100%;
     text-align:center;
     margin:6vh 0px;
     display:none;
 }
-#menu a, #menu2 a {
+#menu a {
     margin:0px 3%;
     font-size:19px;
     color:#fff;
@@ -162,19 +162,10 @@ body {
     border-radius:100px 100px 0px 0px;
     text-decoration: underline;
 }
-#contact:hover {
-    background:rgba(255,50,50,0.9);
-    cursor:pointer;
-}
-#about:hover {
-    background:rgba(255,50,50,0.9);
-    cursor:pointer;
-}
+#contact:hover,
+#donate:hover,
+#about:hover,
 #events:hover {
-    background:rgba(255,50,50,0.9);
-    cursor:pointer;
-}
-#donate:hover {
     background:rgba(255,50,50,0.9);
     cursor:pointer;
 }
@@ -259,7 +250,7 @@ body {
 }
 .btn_one {
     font-size:18px;
-    font-family: 'Josefin Sans', serif;
+    font-family: 'Josefin Sans', sans-serif;
     color:#fff;
     background:transparent;
     border:3px solid #fff;
@@ -276,7 +267,7 @@ body {
 }
 .btn_two {
     font-size:18px;
-    font-family: 'Josefin Sans', serif;
+    font-family: 'Josefin Sans', sans-serif;
     color:rgb(255, 50, 50);
     background:#fff;
     border:3px solid #fff;
@@ -445,7 +436,7 @@ body {
     .container form textarea {
         width:90%;
     }
-    #menu, #menu2 {
+    #menu {
         display:inline-block;
         margin: 0;
         margin-top: 38px;
