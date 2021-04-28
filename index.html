@@ -7,9 +7,11 @@
     <link rel="icon" href="favicon.ico" />
     <title>Tony Martinez Trio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="calendar.css">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -25,49 +27,124 @@
         <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.8s;"></div>
         <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.7s;"></div>
     </div>
-    <a id="contact" href="mailto:contact@tonymartineztrio.com">Contact</a>
-    <a id="about" onclick="showabout()">About</a>
+    <a id="contact" href="mailto:contact@tonymartineztrio.com" target="_blank">contact</a>
+    <a id="about" onclick="showabout('tony')">about</a>
+    <a id="events" onclick="showevents()">events</a>
+    <a id="donate" href="https://musician.tips/tonymartineztrio" target="_blank">donate</a>
     <div id="middle" class="animated slideInDown" style="animation-delay:2.0s;">
-        <h1>Tony Martinez Trio</h1>
-        <h2>Jazz / Latin / Dance</h2>
-        <div id="menu">
-            <a onclick="showabout()">about</a>
-            <a href="mailto:contact@tonymartineztrio.com">contact</a>
+      <div>
+        <h1>Tony
+          Martinez
+          Trio
+        </h1>
+
+        <div class="tmt-photo-container">
+          <img class="animated zoomIn" style="animation-delay:2.9s;" src="./imgs/hanson.jpeg" onclick="showabout('hanson')" />
+          <img class="animated zoomIn" style="animation-delay:2.9s;" src="./imgs/tony.jpeg" onclick="showabout('tony')" />
+          <img class="animated zoomIn" style="animation-delay:2.9s;" src="./imgs/josh.jpeg" onclick="showabout('josh')" />
         </div>
-        <table>
-                <tr>
-                    <!-- <td class="animated zoomIn" style="animation-delay:2.8s;"><a class="social"><i class="fab fa-facebook"></i></a></td>
-                    <td class="animated zoomIn" style="animation-delay:2.8s;"><a class="social"><i class="fab fa-instagram"></i></a></td> -->
-                </tr>
-        </table>
+        <div id="menu">
+            <nobr>
+              <a class="animated zoomIn" style="animation-delay:3.2s;" onclick="showabout('tony')">about</a>
+              <a class="animated zoomIn" style="animation-delay:3.2s;" onclick="showevents()">events</a>
+            </nobr>
+            <nobr>
+              <a class="animated zoomIn" style="animation-delay:3.2s;" href="mailto:contact@tonymartineztrio.com" target="_blank">contact</a>
+              <a class="animated zoomIn" style="animation-delay:3.2s;" href="https://musician.tips/tonymartineztrio" target="_blank">donate</a>
+            </nobr>
+        </div>
+
+        <!-- <h2 class="tmt-subtitle" style="color: rgb(255, 50, 50);">Jazz / Latin / Dance</h2> -->
+      </div>
     </div>
     <div id="about_container" class="container">
-            <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
-            <h1>About</h1>
-            <section>
-                <h2>Personel</h2>
-                <p>
-                    Tony's piano performances are rich with Cuban influence. Improvisation and joy are at the core of Tony's style. In moments of relaxation, you can catch Tony setting the vibe with a Bolero or Bossa Nova.
-                </p>
-                <p>
-                    Tony has been playing piano professionally for over 25 years. Aside from his trio work, Tony plays in any setting. He has an extensive history playing in orchestral, small group, and solo settings.
-                </p>
-                <p>
-                    The rhythm section is composed of two percussionists: Hanson Lee and Josh Schultheiss. They fuze their knowledge of jazz and contemporary music to keep the groove fresh and clean.
-                </p>
-            </section>
-            <section>
-                <h2>Live Performances</h2>
-                <p>
-                    The Tony Martinez Trio is based out of San Francisco. If you are interested in attending one of our dinner time performances, <a class="link-white" href="mailto:contact@tonymartineztrio.com">contact us</a> and we can recommend you a showtime.
-                </p>
-            </section>
-            <section>
-                <h2>Booking</h2>
-                <p>
-                    Are you planning a special event and want personalized live music? Does you want to drive more food traffic to your restaurant? <a class="link-white" href="mailto:contact@tonymartineztrio.com">Contact us</a> so we can further discuss.
-                </p>
-            </section>
+            <div class="no-margin">
+              <div style="display: inline-block;" onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
+
+              <div class="tmt-personel-selector-container">
+                <span class="tmt-personel-selector tony selected">Tony</span>
+                <span class="tmt-personel-selector hanson">Hanson</span>
+                <span class="tmt-personel-selector josh">Josh</span>
+              </div>
+            </div>
+
+            <img id="about-photo" src="./imgs/tony.jpeg" />
+
+            <div id="tony" style="display: none;">
+              <section>
+                  <p>
+                      Improvisation and joy are the cornerstones of Tony's style.
+                  </p>
+                  <p>
+                      Tony studied Classical Cuban piano at the Ignacio Cervantes Conservatory in Habana, Cuba. Afterward, Tony turned to study the rhythms of jazz.
+                  </p>
+                  <p>
+                      For over a decade, Tony has developed a jazz performance rich with influence of traditional Cuban rhythms.
+                  </p>
+                  <p>
+                      Tony has taken his performances around the world in countries such as: Albania, Germany, Argentina, Belgium, Chile, Denmark, Spain, France, Holland, England, Norway, Portugal, Sweden, and Russia.
+                  </p>
+                  <p>
+                      <a href="./tonymartinezmusic.pdf" target="_blank">Más información sobre tony.</a>
+                  </p>
+              </section>
+              <div style="text-align: center; font-size: 36px;">
+                  🎹
+              </div>
+            </div>
+
+            <div id="hanson" style="display: none;">
+              <section>
+                  <p>
+                      Hanson Lee, influenced by the jazz and gospel music of New York, brings life through his conga performance. Since emigrating from China, Hanson has soaked up all of the multicultural experiences that America has to offer.
+                  </p>
+                  <p>
+                      Social justice is an integral part of Hanson's regimen.
+                  </p>
+                  <p>
+                      Hanson takes full advantage of the free educational resources that San Francisco has to offer (<a href="https://www.ccsf.edu/" target="_blank">CCSF</a> and the <a href="https://sfpl.org/" target="_blank">public library</a>) to further his understanding of history.
+                  </p>
+                  <p>
+                      His volunteer work with <a href="https://www.acceaction.org/" target="_blank">ACCE</a>, <a href="https://www.aaca-sf.com/" target="_blank">AACA</a>, and <a href="https://www.cclpbayarea.org/" target="_blank">CCLP</a> continues to have a strong impact on the community.
+                  </p>
+                  <p>
+                      As described by Archbishop Franzo Wayne King of the <a href="https://www.coltranechurch.org/" target="_blank">Coltrane Church</a>:
+                  </p>
+                  <p>
+                      <i>"He is a selfless individual and understands intersections of cultures and the importance of raising conciousness."</i>
+                  </p>
+              </section>
+              <div style="text-align: center; font-size: 36px;">
+                  🪘
+              </div>
+            </div>
+
+            <div id="josh" style="display: none;">
+              <section>
+                  <p>
+                      Josh fuzes his knowledge of contemporary musics to keep the groove fresh and clean. He has developed a wide repertoire giving him a reputation of being a musical chameleon.
+                  </p>
+                  <p>
+                      He was raised in the Cleveland, Ohio amongst the jazz scene and studied drum set under Bill Ransom.
+                  </p>
+                  <p>
+                      Josh strives to support the Bay Area community by creating more economically equitable conditions. Aside from his percussion performance, he works on <a href="https://linktr.ee/0x213F" target="_blank">open source software</a>.
+                  </p>
+              </section>
+              <div style="text-align: center; font-size: 36px;">
+                  🥁
+              </div>
+            </div>
+        </div>
+        <div id="events_container" class="container">
+            <div style="display: inline-block;" onclick="closeevents()"><i class="fas fa-angle-left"></i></div>
+
+            <iframe src="https://calendar.google.com/calendar/embed?src=c_pfve04vugcc7mcrdsa3cju15is%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0; height: 400px;" width="100%" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <div id="footer">
+          <a class="social link-white" href="https://www.instagram.com/tonymartineztrio/" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
         </div>
     <script src="index.js" type="text/javascript"></script>
     <script src="particles.js"></script>
