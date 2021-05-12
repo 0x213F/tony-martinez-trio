@@ -71,3 +71,18 @@ $personelSelector.click(function() {
     $josh.show();
   }
 });
+
+function showvideos(){
+  $("#videos_container").css("display","inherit");
+  $("#videos_container").addClass("animated slideInUp");
+  setTimeout(function(){
+      $("#videos_container").removeClass("animated slideInUp");
+  },800);
+}
+function closevideos(){
+  $("#videos_container").addClass("animated slideOutDown");
+  setTimeout(function(){
+      $("#videos_container").removeClass("animated slideOutDown");
+      $("#videos_container").css("display","none");
+  },800);
+}
