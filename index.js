@@ -46,7 +46,7 @@ setTimeout(function(){
 const $aboutPhoto = $("#about-photo");
 const $personelSelector = $(".tmt-personel-selector");
 const $tony = $("#tony"),
-      $hanson = $("#hanson"),
+      $kelly = $("#kelly"),
       $josh = $("#josh");
 
 $personelSelector.click(function() {
@@ -57,15 +57,15 @@ $personelSelector.click(function() {
   $this.addClass("selected");
 
   $tony.hide();
-  $hanson.hide();
+  $kelly.hide();
   $josh.hide();
 
   if(thisText === "Tony") {
     $aboutPhoto.attr("src", "./imgs/tony.jpeg");
     $tony.show();
-  } else if(thisText === "Hanson") {
-    $aboutPhoto.attr("src", "./imgs/hanson.jpeg");
-    $hanson.show();
+  } else if(thisText === "Kelly") {
+    $aboutPhoto.attr("src", "./imgs/kelly.jpeg");
+    $kelly.show();
   } else if(thisText === "Josh") {
     $aboutPhoto.attr("src", "./imgs/josh.jpeg");
     $josh.show();

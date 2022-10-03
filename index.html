@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="calendar.css">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -35,9 +34,7 @@
         </h1>
 
         <div class="tmt-photo-container">
-          <img class="animated zoomIn" style="animation-delay:2.9s;" src="./imgs/hanson.jpeg" onclick="showabout('hanson')" />
           <img class="animated zoomIn" style="animation-delay:2.9s;" src="./imgs/tony.jpeg" onclick="showabout('tony')" />
-          <img class="animated zoomIn" style="animation-delay:2.9s;" src="./imgs/josh.jpeg" onclick="showabout('josh')" />
         </div>
         <div id="menu">
             <nobr>
@@ -46,10 +43,10 @@
             </nobr>
             <nobr>
               <a class="animated zoomIn" style="animation-delay:3.2s;" href="mailto:tonymartineztrio@gmail.com" target="_blank">contact</a>
-              <a class="animated zoomIn" style="animation-delay:3.2s;" href="https://musician.tips/tonymartineztrio" target="_blank">donate</a>
+              <a class="animated zoomIn" style="animation-delay:3.2s;" onclick="showvideos()">videos</a>
             </nobr>
             <nobr>
-              <a class="animated zoomIn" style="animation-delay:3.2s;" onclick="showvideos()">videos</a>
+              <a class="animated zoomIn" style="animation-delay:3.2s;" href="https://www.instagram.com/tonymartineztrio/">@tonymartineztrio</a>
             </nobr>
         </div>
 
@@ -62,8 +59,8 @@
 
               <div class="tmt-personel-selector-container">
                 <span class="tmt-personel-selector tony selected">Tony</span>
-                <span class="tmt-personel-selector hanson">Hanson</span>
                 <span class="tmt-personel-selector josh">Josh</span>
+                <span class="tmt-personel-selector kelly">Kelly</span>
               </div>
             </div>
 
@@ -92,42 +89,33 @@
               </div>
             </div>
 
-            <div id="hanson" style="display: none;">
+            <div id="kelly" style="display: none;">
               <section>
                   <p>
-                      Hanson Lee, influenced by the jazz and gospel music of New York, brings life through his conga performance. Since emigrating from China, Hanson has soaked up all of the multicultural experiences that America has to offer.
+                      Kelly Lee is a jazz vocalist with a Korean influence.
                   </p>
                   <p>
-                      Social justice is an integral part of Hanson's regimen.
-                  </p>
-                  <p>
-                      Hanson takes full advantage of the free educational resources that San Francisco has to offer (<a href="https://www.ccsf.edu/" target="_blank">CCSF</a> and the <a href="https://sfpl.org/" target="_blank">public library</a>) to further his understanding of history.
-                  </p>
-                  <p>
-                      His volunteer work with <a href="https://www.acceaction.org/" target="_blank">ACCE</a>, <a href="https://www.aaca-sf.com/" target="_blank">AACA</a>, and <a href="https://www.cclpbayarea.org/" target="_blank">CCLP</a> continues to have a strong impact on the community.
-                  </p>
-                  <p>
-                      As described by Archbishop Franzo Wayne King of the <a href="https://www.coltranechurch.org/" target="_blank">Coltrane Church</a>:
-                  </p>
-                  <p>
-                      <i>"He is a selfless individual and understands intersections of cultures and the importance of raising conciousness."</i>
+                      While her performances range from classical to popular, they all have one thing in common: soul. Her emotional interplay with music makes her a captivating presence.
                   </p>
               </section>
               <div style="text-align: center; font-size: 36px;">
-                  🪘
+                  🎙
               </div>
             </div>
 
             <div id="josh" style="display: none;">
               <section>
                   <p>
-                      Josh fuzes his knowledge of contemporary musics to keep the groove fresh and clean. He has developed a wide repertoire giving him a reputation of being a musical chameleon.
+                      Josh fuzes his knowledge of musics to keep the groove fresh and clean. He draws references from contemporary (American) and traditional (World) styles.
                   </p>
                   <p>
                       He was raised in the Cleveland, Ohio amongst the jazz scene and studied drum set under Bill Ransom.
                   </p>
                   <p>
-                      Josh strives to support the Bay Area community by creating more economically equitable conditions. Aside from his percussion performance, he works on <a href="https://linktr.ee/0x213F" target="_blank">open source software</a>.
+                      Josh is pioneering <i>improvised</i> light shows that go in tandem with his percussion performances.
+                  </p>
+                  <p>
+                      <a href="https://www.instagram.com/soundsradiant/">Follow Josh on Instagram: @soundsradiant</a>
                   </p>
               </section>
               <div style="text-align: center; font-size: 36px;">
@@ -143,8 +131,21 @@
         <div id="videos_container" class="container">
             <div style="display: inline-block;" onclick="closevideos()"><i class="fas fa-angle-left"></i></div>
             <br>
-            <div class="YTC"><img id="videos-photo" src="./imgs/main.jpeg" /></div>
-            <div class="YTC"><iframe class="YTV" src="https://www.youtube.com/embed/JJ0Aw4zKRAg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="YTW">
+              <div class="YTC">
+                <iframe class="YTV" src="https://www.youtube.com/embed/fyhqfNkZ4js" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="YTW">
+              <div class="YTC">
+                <iframe class="YTV" src="https://www.youtube.com/embed/POB8YD3TUFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="YTW">
+              <div class="YTC">
+                <iframe class="YTV" src="https://www.youtube.com/embed/JJ0Aw4zKRAg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
         </div>
         <!-- <div id="footer">
           <a class="social link-white" href="https://www.instagram.com/tonymartineztrio/" target="_blank">

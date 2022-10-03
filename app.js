@@ -21,7 +21,6 @@ particlesJS('particles-js',
         "nb_sides": 5
       },
       "image": {
-        "src": "img/github.svg",
         "width": 100,
         "height": 100
       }
